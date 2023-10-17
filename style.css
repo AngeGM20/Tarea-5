@@ -1,0 +1,91 @@
+/* Estilos generales para el formulario */
+/* Estilos generales para el formulario */
+form {
+    margin: 0 auto;
+    width: 320px;
+    padding: 50px;
+    text-align: center;
+    background-color: #3498db;
+    border: 1px solid #297ca0;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    font-family: Arial, sans-serif;
+    color: #fff;
+}
+
+/* Estilos para etiquetas y campos de entrada */
+label {
+    display: block;
+    margin: 10px 0;
+    font-weight: bold;
+    color: #fff;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="password"] {
+    width: 100%;
+    padding: 8px;
+    margin: 5px 0;
+    border: 1px solid #297ca0;
+    border-radius: 3px;
+    background-color: #f5fcff;
+    transition: border 0.3s, background-color 0.3s;
+    font-size: 14px;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus,
+input[type="password"]:focus {
+    border: 1px solid #3498db;
+    background-color: #fff;
+}
+
+/* Estilos para botones y campos de radio */
+input[type="button"],
+input[type="radio"] {
+    margin: 5px 10px 5px 0;
+}
+
+/* Estilos para el título del formulario */
+h1 {
+    font-size: 24px;
+    margin: 0 0 20px;
+    color: #fff;
+}
+
+/* Estilos para los mensajes de salida */
+p {
+    font-weight: bold;
+    margin: 5px 0;
+    color: #3498db;
+}
+
+/* Estilos para el botón con animación */
+input[type="button"] {
+    padding: 10px 20px;
+    background-color: #297ca0;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+input[type="button"]:hover {
+    background-color: #245e80;
+    transform: scale(1.1);
+}
+
+/* Estilos para la sección de información impresa */
+#informacionImpresa {
+    margin-top: 20px;
+    padding: 10px;
+    border: 1px solid #297ca0;
+    border-radius: 5px;
+    background-color: #fff;
+    color: #3498db;
+}
+

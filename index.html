@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Tarea 5</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='style.css'>
+    <script src='main.js'></script>
+</head>
+
+<form>
+    <h1>FORMULARIO</h1>
+    <div>
+        <label>Número de Cédula:</label>
+        <input type="text" id="txtCedula" />
+    </div>
+    
+    <div>
+        <label>Nombre:</label>
+        <input type="text" id="txtNombre" value="" />
+    </div>
+    <div>
+        <label>Apellido:</label>
+        <input type="text" id="txtApellido" value="" />
+    </div>
+
+    <div>
+        <label>
+            <label>Genero:</label>
+            <label><input type="checkbox" name="genero" value="Femenino" />Femenino</label>
+            <label><input type="checkbox" name="genero" value="Masculino" />Masculino</label>
+        </label>
+        
+    </div>
+
+    <div>
+        <label>Fecha de Nacimiento:</label>
+        <input type="date" id="txtFecha" min="1990-01-01" max="2023-12-31" value=""/>
+    </div>
+
+    <div>
+        <label>Provincia:</label>
+        <select id="selectProvincia">
+            <option value="San Jose">San José</option>
+            <option value="Alajuela">Alajuela</option>
+            <option value="Cartago">Cartago</option>
+            <option value="Heredia">Heredia</option>
+            <option value="Guanacaste">Guanacaste</option>
+            <option value="Puntarenas">Puntarenas</option>
+            <option value="Limón">Limón</option>
+        </select>
+    </div>
+
+    <div>
+        <label>Estado Civil:</label>
+        <input type="radio" name="estadoCivil" value="Soltero"> Soltero
+        <input type="radio" name="estadoCivil" value="Casado"> Casado
+        <input type="radio" name="estadoCivil" value="Divorciado"> Divorciado
+        <input type="radio" name="estadoCivil" value="Viudo"> Viudo
+        <input type="radio" name="estadoCivil" value="Unión Libre"> Unión Libre
+    </div>
+    
+
+    <div>
+        <label>Teléfono:</label>
+        <input type="tel" id="txtTelefono" value="" />
+    </div>
+
+    <div>
+        <label>Email:</label>
+        <input type="email" id="txtEmail" value="" />
+    </div>
+
+    <div>
+        <label>Contraseña:</label>
+        <input type="password" id="txtContraseña" />
+    </div>
+
+    <div>
+        <input type="button" onclick="imprimir()" value="Imprimir"/>
+    </div>
+
+
+</form>
+<p id="pCedula"></p>
+<p id="pNombre"></p>
+<p id="pApellido"></p>
+<p id="pGenero"></p>
+<P id="pFecha"></P>
+<p id="pProvincia"></p>
+<p id="pEstadoCivil"></p>
+<p id="pTelefono"></p>
+<p id="pEmail"></p>
+<p id="pContraseña"></p>
+
+
+<script>
+function imprimir() 
+    {
+        var cedula = document.getElementById("txtCedula").value;
+        document.getElementById("pCedula").innerHTML = 'Número de Cédula: ' + cedula;
+        alert('Número de Cédula: ' + cedula);
+
+      var valor = document.getElementById("txtNombre").value;
+      document.getElementById("pNombre").innerHTML = 'Nombre: ' + valor;
+      alert(valor)
+
+      valor = document.getElementById("txtApellido").value;
+      document.getElementById("pApellido").innerHTML = 'Apellido: ' + valor;
+      alert(valor)
+
+      var genero = document.querySelector('input[name="genero"]:checked');
+    if (genero) {
+    document.getElementById("pGenero").innerHTML = 'Genero: ' + genero.value;
+    alert(genero.value);
+    } 
+    else {
+    document.getElementById("pGenero").innerHTML = 'Genero: No seleccionado';
+    alert('Genero no seleccionado');
+    }
+
+      valor = document.getElementById("txtFecha").value;
+      document.getElementById("pFecha").innerHTML = 'Fecha Registro: ' + valor;
+      alert(valor)
+      
+      var provincia = document.getElementById("selectProvincia");
+      var selectedProvincia = provincia.options[provincia.selectedIndex].value;
+      document.getElementById("pProvincia").innerHTML = 'Provincia: ' + selectedProvincia;
+      alert(selectedProvincia);
+
+        var estadoCivil = document.querySelector('input[name="estadoCivil"]:checked');
+        if (estadoCivil) {
+        document.getElementById("pEstadoCivil").innerHTML = 'Estado Civil: ' + estadoCivil.value;
+            alert(estadoCivil.value);
+        } 
+        else {
+        document.getElementById("pEstadoCivil").innerHTML = 'Estado Civil: No seleccionado';
+            alert('Estado Civil no seleccionado');
+        }   
+
+      valor = document.getElementById("txtTelefono").value;
+      document.getElementById("pTelefono").innerHTML = 'Teléfono: ' + valor;
+      alert(valor)
+
+      valor = document.getElementById("txtEmail").value;
+      document.getElementById("pEmail").innerHTML = 'Email: ' + valor;
+      alert(valor)
+
+      var contraseña = document.getElementById("txtContraseña").value;
+    document.getElementById("pContraseña").innerHTML = 'Contraseña: ' + contraseña;
+    alert('Contraseña: ' + contraseña);
+
+
+    }
+</script>
+
+</html>
